@@ -3,6 +3,7 @@ using RimWorld;
 using System;
 using System.Collections.Generic;
 using Verse;
+using System.Reflection;
 
 namespace W1814_Remedial_Action
 {
@@ -19,7 +20,7 @@ namespace W1814_Remedial_Action
                 if (def.IsRangedWeapon)
                     def.comps.Add(new W1814RA_CompProperties());
             }
-            new Harmony("W1814_Remedial_Action").PatchAll();
+            new Harmony("W1814_Remedial_Action").PatchAll(Assembly.GetExecutingAssembly());
         }
     }
 
